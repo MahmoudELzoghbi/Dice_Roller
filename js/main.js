@@ -112,6 +112,7 @@ btnHold.addEventListener("click", () => {
 // reset the game
 btnNew.addEventListener("click", function () {
   console.log("reset");
+  diceEl.classList.add("hidden");
   playing = true;
   curenntScore = 0;
 
