@@ -1,0 +1,323 @@
+@import url("https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@400;500;600;700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Edu TAS Beginner", cursive;
+  background-image: url(../image/360_F_574036971_yTQKt1TSRiOGFeqpNzLnU9p0ubeREH4f.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  background-size: cover;
+}
+.info {
+  position: relative;
+  z-index: 3;
+}
+.info h1 {
+  text-align: center;
+  color: #ebebe3;
+  text-transform: capitalize;
+  letter-spacing: 3px;
+}
+
+.container {
+  width: 100%;
+  height: 93%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.row {
+  width: 40%;
+  background-color: #22222234;
+  height: 90%;
+  border: 1px solid;
+  border-radius: 8px;
+  position: relative;
+  z-index: -1;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  transition: all 0.75s;
+}
+.row h2 {
+  font-size: 18px;
+  color: #c4c430;
+  font-weight: 700;
+  font-size: 1.8em;
+}
+.row .scroll_rolle {
+  font-size: 50px;
+  color: #fff;
+  font-weight: 900;
+}
+#Description {
+  right: 0;
+  top: 15px;
+  transition: 0.3 all;
+  cursor: pointer;
+}
+#Description a {
+  text-decoration: none;
+}
+
+.info_score {
+  background-color: #0000ff6b;
+  color: #c4c430;
+  font-weight: 400;
+  font-size: 26px;
+  padding: 12px;
+  text-align: center;
+  border: 1px solid transparent;
+  border-radius: 13px;
+}
+.dice {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transform-style: preserve-3d;
+  transform: rotatex(-20deg) rotateY(-30deg) rotateZ(360deg);
+  animation: anim 0.8s linear 2;
+}
+@keyframes anim {
+  to {
+    transform: rotatex(20deg) rotateY(360deg);
+  }
+}
+.rolle {
+  position: absolute;
+  width: 4em;
+  height: 4em;
+  background-color: blue;
+  border: 1px solid;
+  overflow: hidden;
+  transform: translate(-50%, -50%);
+}
+.dice_front {
+  transform: translateZ(2em);
+}
+.dice_back {
+  transform: translateZ(-2em);
+}
+.dice_left {
+  transform: translateX(-2em) rotateY(90deg);
+}
+.dice_right {
+  transform: translateX(2em) rotateY(90deg);
+}
+.dice_top {
+  transform: translatey(-2em) rotateX(90deg);
+}
+.dice_bottom {
+  transform: translatey(2em) rotateX(90deg);
+}
+
+.circle {
+  width: 0.4em;
+  height: 0.4em;
+  background-color: #fff;
+  position: absolute;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* dice rolle 1 and 5 and 3 */
+.rolle_num1 {
+  top: 50%;
+  left: 50%;
+}
+
+/* dice rolle 2 */
+.dice_right span:nth-child(1) {
+  top: 20%;
+  left: 20%;
+}
+
+.dice_right span:nth-child(2) {
+  bottom: 20%;
+  right: 20%;
+}
+
+/* dice rolle 3 */
+.dice_front span:nth-child(1) {
+  top: 45%;
+  left: 46%;
+}
+.dice_front span:nth-child(2) {
+  top: 20%;
+  left: 20%;
+}
+
+.dice_front span:nth-child(3) {
+  bottom: 20%;
+  right: 20%;
+}
+
+/* dice rolle 4 */
+.dice_back span:nth-child(1) {
+  top: 20%;
+  left: 20%;
+}
+
+.dice_back span:nth-child(2) {
+  bottom: 20%;
+  left: 20%;
+}
+
+.dice_back span:nth-child(3) {
+  top: 20%;
+  right: 20%;
+}
+
+.dice_back span:nth-child(4) {
+  bottom: 20%;
+  right: 20%;
+}
+
+/* dice rolle 5 */
+.dice_top span:nth-child(1) {
+  top: 15%;
+  left: 15%;
+}
+
+.dice_top span:nth-child(2) {
+  bottom: 10%;
+  left: 15%;
+}
+
+.dice_top span:nth-child(3) {
+  top: 15%;
+  right: 15%;
+}
+
+.dice_top span:nth-child(4) {
+  bottom: 10%;
+  right: 15%;
+}
+.dice_top span:nth-child(5) {
+  top: 49%;
+  right: 45%;
+}
+
+/* dice rolle 6 */
+.dice_bottom span:nth-child(1) {
+  top: 25%;
+  left: 20%;
+}
+
+.dice_bottom span:nth-child(2) {
+  top: 50%;
+  left: 20%;
+}
+
+.dice_bottom span:nth-child(3) {
+  top: 75%;
+  left: 20%;
+}
+
+.dice_bottom span:nth-child(4) {
+  top: 25%;
+  right: 20%;
+}
+
+.dice_bottom span:nth-child(5) {
+  top: 50%;
+  right: 20%;
+}
+
+.dice_bottom span:nth-child(6) {
+  top: 75%;
+  right: 20%;
+}
+/* .chenge_play {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+} */
+.btn {
+  position: absolute;
+  color: #444;
+  outline: none;
+  padding: 8px 12px;
+  border: 1px solid transparent;
+  border-radius: 20px;
+  text-transform: capitalize;
+  font-weight: 600;
+  transform: translateX(-50%);
+  font-size: 24px;
+  transition: all 0.2s;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  text-align: center;
+  font-family: "Edu TAS Beginner", cursive;
+}
+.btn--new {
+  top: 20%;
+}
+.btn--roll {
+  bottom: 30%;
+}
+.btn--hold {
+  bottom: 15%;
+}
+.btn:active {
+  transform: translate(-50%, 3px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+}
+.hidden {
+  display: none;
+}
+.player--active {
+  background-color: #141313ce;
+}
+.winning__player {
+  background-color: #232ac8ce;
+}
+
+/* style the hidding div for discraption */
+.how_playing {
+  position: absolute;
+  background: #f2ecec;
+  line-height: 2;
+  font-weight: 700;
+  font-size: 18px;
+  right: 57px;
+  padding: 8px;
+  top: 70px;
+  font-family: serif;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  z-index: 10;
+}
+.how_playing ol {
+  margin-left: 18px;
+}
+.how_playing h1 {
+  color: #181817;
+}
+.blur {
+  position: absolute;
+  z-index: 2;
+  inset: 0;
+  background: #2222229c;
+}
+.close-modal {
+  position: absolute;
+  top: -8px;
+  right: 12px;
+  font-size: 3rem;
+  color: #333;
+  cursor: pointer;
+  border: none;
+  background: none;
+}

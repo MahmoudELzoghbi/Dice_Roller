@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      contentdice_back="width=device-width, initial-scale=1.0"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>dice roll</title>
+  </head>
+  <body>
+    <div class="info">
+      <h1>dic roller</h1>
+      <button class="btn" id="Description"><a>Description?</a></button>
+      <div class="how_playing hidden">
+        <button class="close-modal">&times;</button>
+        <h1>How to play the game😍</h1>
+        <ol>
+          <li>
+            The first player rolls the dice to get a random result between 1 and
+            6.
+          </li>
+          <li>
+            If the number 1 appears, the player loses all the points they have
+            accumulated so far and the turn moves to the next player.
+          </li>
+          <li>
+            If a number other than 1 appears, the points obtained from rolling
+            the dice are added to the player's total score.
+          </li>
+          <li>
+            The dice is then passed to the next player, who repeats the process.
+          </li>
+          <li>
+            Players continue rolling the dice and accumulating points until one
+            of them reaches 100 points.
+          </li>
+          <li>You can repeat the game to determine consecutive winners.</li>
+        </ol>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row player player--0 player--active">
+        <h2 id="name--0">player 1</h2>
+        <div>
+          <span class="scroll_rolle" id="score--0">24 </span>
+        </div>
+
+        <div class="info_score">
+          <h5>current score</h5>
+          <span class="total0Score">0</span>
+        </div>
+      </div>
+      <section class="chenge_play">
+        <button class="btn btn--new">🔄 New game</button>
+        <div class="dice">
+          <div class="rolle num1 dice_left">
+            <span class="rolle_num1 circle"></span>
+          </div>
+          <div class="rolle num2 dice_right">
+            <span class="rolle_num1 circle"></span>
+            <span class="rolle_num2 circle"></span>
+          </div>
+          <div class="rolle num3 dice_front">
+            <span class="rolle_num1 circle"></span>
+            <span class="rolle_num2 circle"></span>
+            <span class="rolle_num3 circle"></span>
+          </div>
+          <div class="rolle num4 dice_back">
+            <span class="rolle_num1 circle"></span>
+            <span class="rolle_num2 circle"></span>
+            <span class="rolle_num3 circle"></span>
+            <span class="rolle_num4 circle"></span>
+          </div>
+          <div class="rolle num5 dice_top">
+            <span class="rolle_num1 circle"></span>
+            <span class="rolle_num2 circle"></span>
+            <span class="rolle_num3 circle"></span>
+            <span class="rolle_num4 circle"></span>
+            <span class="rolle_num5 circle"></span>
+          </div>
+          <div class="rolle num6 dice_bottom">
+            <span class="rolle_num1 circle"></span>
+            <span class="rolle_num2 circle"></span>
+            <span class="rolle_num3 circle"></span>
+            <span class="rolle_num4 circle"></span>
+            <span class="rolle_num5 circle"></span>
+            <span class="rolle_num6 circle"></span>
+          </div>
+        </div>
+        <button class="btn btn--roll">🎲 Roll dice</button>
+        <button class="btn btn--hold">📥 Hold</button>
+      </section>
+
+      <div class="row player player--1">
+        <h2 id="name--1">player 2</h2>
+        <div>
+          <span class="scroll_rolle" id="score--1">12 </span>
+        </div>
+
+        <div class="info_score">
+          <h5>current score</h5>
+          <span class="total1Score">0</span>
+        </div>
+      </div>
+    </div>
+    <div class="blur hidden"></div>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
