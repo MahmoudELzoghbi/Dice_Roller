@@ -14,9 +14,9 @@ let total1Score = document.querySelector(".total1Score");
 const Description = document.getElementById("Description");
 const howPlaying = document.querySelector(".how_playing");
 const overlay = document.querySelector(".blur");
-console.log(overlay);
+console.log(score0Player, score1Player);
 
-//function for reset number of player
+// reset number of player
 score0Player.textContent = 0;
 score1Player.textContent = 0;
 diceEl.classList.add("hidden");
@@ -66,8 +66,7 @@ btnRoll.addEventListener("click", function () {
       } else if (dice === 6) {
         diceEl.style.transform = "rotatex(90deg) rotateY(0deg) rotateZ(360deg)";
       }
-      score0Player = dice;
-      score1Player = dice;
+
       curenntScore += dice;
       document.querySelector(`.total${activePlayer}Score`).textContent =
         curenntScore;
@@ -90,7 +89,7 @@ btnHold.addEventListener("click", () => {
     document.querySelector(`#score--${activePlayer}`).textContent =
       scors[activePlayer];
     //if you >= 100 should have winer
-    if (scors[activePlayer] >= 100) {
+    if (scors[activePlayer] >= 10) {
       diceEl.classList.add("hidden");
       playing = false;
       document
@@ -101,7 +100,7 @@ btnHold.addEventListener("click", () => {
       ).style.backgroundColor = "#635e5ebf";
       document.getElementById(
         `name--${activePlayer}`
-      ).textContent = `🥳🎉player ${activePlayer} is winning `;
+      ).textContent = `🥳🎉player ${activePlayer + 1} is winning `;
     } else {
       //switch player
       playerActive();
@@ -111,17 +110,19 @@ btnHold.addEventListener("click", () => {
 
 // reset the game
 btnNew.addEventListener("click", function () {
-  console.log("reset");
   diceEl.classList.add("hidden");
   playing = true;
   curenntScore = 0;
+  scors = [0, 0];
+  activePlayer = 0;
 
   //1- reset all score to zero
-  scors = [0, 0];
-  document.querySelector(`#score--0`).textContent = curenntScore;
-  document.querySelector(`#score--1`).textContent = curenntScore;
-  document.querySelector(`.total0Score`).textContent = curenntScore;
-  document.querySelector(`.total1Score`).textContent = curenntScore;
+  score0Player.textContent = 0;
+  score1Player.textContent = 0;
+  total0Score.textContent = 0;
+  total1Score.textContent = 0;
+  player0el.classList.add("player--active");
+  player1el.classList.remove("player--active");
 
   document
     .querySelector(`.player--${activePlayer}`)
