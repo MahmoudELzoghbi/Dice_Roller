@@ -22,7 +22,7 @@ score1Player.textContent = 0;
 diceEl.classList.add("hidden");
 let clickCount = 0; // تعداد عدد النقرات
 let curenntScore = 0;
-const scors = [0, 0];
+let scors = [0, 0];
 let activePlayer = 0;
 let playing = true;
 
@@ -117,11 +117,11 @@ btnNew.addEventListener("click", function () {
   curenntScore = 0;
 
   //1- reset all score to zero
-  scors[activePlayer] = curenntScore;
-  document.querySelector(`#score--${activePlayer}`).textContent =
-    scors[activePlayer];
-  document.querySelector(`.total${activePlayer}Score`).textContent =
-    curenntScore;
+  scors = [0, 0];
+  document.querySelector(`#score--0`).textContent = curenntScore;
+  document.querySelector(`#score--1`).textContent = curenntScore;
+  document.querySelector(`.total0Score`).textContent = curenntScore;
+  document.querySelector(`.total1Score`).textContent = curenntScore;
 
   document
     .querySelector(`.player--${activePlayer}`)
