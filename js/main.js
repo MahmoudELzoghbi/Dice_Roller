@@ -14,7 +14,6 @@ let total1Score = document.querySelector(".total1Score");
 const Description = document.getElementById("Description");
 const howPlaying = document.querySelector(".how_playing");
 const overlay = document.querySelector(".blur");
-console.log(score0Player, score1Player);
 
 // reset number of player
 score0Player.textContent = 0;
@@ -80,7 +79,6 @@ btnRoll.addEventListener("click", function () {
     }
   }
 
-  //4.chosse the sid of dice
 });
 btnHold.addEventListener("click", () => {
   if (playing) {
@@ -89,7 +87,7 @@ btnHold.addEventListener("click", () => {
     document.querySelector(`#score--${activePlayer}`).textContent =
       scors[activePlayer];
     //if you >= 100 should have winer
-    if (scors[activePlayer] >= 10) {
+    if (scors[activePlayer] >= 100) {
       diceEl.classList.add("hidden");
       playing = false;
       document
